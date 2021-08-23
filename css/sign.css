@@ -1,0 +1,144 @@
+.sign__bg {
+    background: var(--off-clr);
+}
+
+.sign_page_header {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+}
+
+.sign__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item .back_icon {
+    background-color: var(--white);
+    padding: .6rem .8rem;
+    border-radius: .4rem;
+    border: 1px solid var(--text-clr);
+}
+
+.back_home {
+    display: none;
+}
+
+.sign__content {
+    height: 100%;
+}
+
+.column-one,
+.column-two {
+    grid-column: span 4;
+}
+
+.sign_heading {
+    font-size: 3rem;
+    color: var(--dark-clr);
+}
+
+.item {
+    margin-top: 3rem;
+}
+
+.item_p strong {
+    color: var(--dark-clr);
+}
+
+.column-two {
+    padding: 2rem 2rem 3rem 2rem;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+}
+
+.column-two--title {
+    margin: 2rem 0 3rem 0;
+}
+
+.input--group {
+    margin-bottom: 2.5rem;
+}
+
+.input--group label {
+    display: block;
+    font-weight: var(--medium-font-w);
+    margin-bottom: 1rem;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--text-clr);
+    outline: none;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+}
+
+.checkbox p {
+    display: inline;
+}
+
+.terms {
+    text-decoration: underline;
+    font-weight: var(--small-font-w);
+}
+
+.column-two--button {
+    text-align: center;
+}
+
+.signup--button {
+    width: 100%;
+    color: var(--white);
+}
+
+
+/*============================================= 
+############### MEDIA QUERIES ###############
+=============================================*/
+
+@media screen and (min-width: 768px) {
+     :root {
+        --num-of-grid-columns: 8;
+    }
+    .back_home {
+        color: var(--dark-clr);
+        display: block;
+        font-size: 2rem;
+        margin-left: 1rem;
+        font-weight: var(--medium-font-w);
+    }
+    .column-one,
+    .column-two {
+        grid-column: span 8;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+     :root {
+        --num-of-grid-columns: 12;
+    }
+    .column-one {
+        grid-column: 1/6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .column-two {
+        padding: 2rem 2rem 3rem 2rem;
+        margin-top: 0rem;
+        grid-column: 7/-1;
+    }
+}

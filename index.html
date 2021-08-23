@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiebrew</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="page__header" id="header">
+        <div class="container">
+            <nav class="main__nav" id="menu">
+                <a href="index.html" class="logo"><img src="./Assets/Logo.svg" alt=""></a>
+                <div class="menu__toggle">
+                    <img src="./Assets/Hamburger Menu.svg" alt="" class="hamburger__menu">
+                </div>
+                <div class="menu__dropdown">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
+                        <li class="nav-item"><a href="#" class="btn nav_btn">Get started - <span>it's free</span> </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="hero_section">
+            <div class="container row">
+                <img src="./Assets/Feed Mockup.png" alt="" class="hero_img">
+                <div class="hero_text">
+                    <h1 class="main_heading">Your weekly <br> personal feed digest.</h1>
+                    <p class="hero_paragraph">With IndieBrew, get personal feeds from resources all around the web, including Reddit, HackerNews, IndieHackers, and much more.</p>
+                    <div class="hero_btn">
+                        <a href="#" class="btn primary_btn">Get started  <span>- it's free</span></a>
+                    </div>
+                    <div class="user_container">
+                        <img src="./Assets/User Avatars.svg" alt="" class="user_img">
+                        <p class="user_paragraph">Join <span>32,642</span> IndieBrewers in curating their personal digest. </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="section curate__feed">
+            <div class="container row">
+                <div class="col-1 col-1-order">
+                    <img src="./Assets/Social Media Icons.png" alt="" class="curate_img">
+                </div>
+                <div class="col-2">
+                    <h2 class="heading">Curate your feed from dozens of sources.</h2>
+                    <p>We cover all major platforms where one could want to curate their feed from. Reddit, ProductHunt, IndieHackers, and so much more.</p>
+                    <a href="#" class="resources">See full list of resources &#8594</a>
+                </div>
+            </div>
+
+        </section>
+        <section class="section phone">
+            <div class="container row">
+                <div class="image_container">
+                    <img src="./Assets/Phone Mockup.png" alt="" class="phone_img">
+                </div>
+                <div class="content">
+                    <h2 class="heading">Acces your feed from the <br> comfort of your phone.</h2>
+                    <p>With native apps for oth iOS and Android, accessing your curated content has never been easier.</p>
+                    <a href="sign.html" class="resources">Sign up for the waitlist &#8594</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer class="main__footer">
+        <div class="container row">
+            <div class="infor_box">
+                <h3 class="footer_logo">IndieBrew</h3>
+                <p class="footer_p">With IndieBrew, get personal feeds from resources all around the web, including Reddit, HackerNews, and much more</p>
+                <p>Made with &#10084 in the UK.</p>
+            </div>
+            <div class="spacer"></div>
+            <div class="footer_links_group">
+                <h5 class="footer_title">Sitemap</h5>
+                <a href="#" class="footer_link">Home </a>
+                <a href="#" class="footer_link">Pricing</a>
+            </div>
+            <div class="footer_links_group">
+                <h5 class="footer_title">Resources</h5>
+                <a href="#" class="footer_link">Support </a>
+                <a href="#" class="footer_link">Contact</a>
+                <a href="#" class="footer_link">FAQ</a>
+            </div>
+            <div class="footer_links_group">
+                <h5 class="footer_title">Company</h5>
+                <a href="#" class="footer_link">About </a>
+                <a href="#" class="footer_link">Customerst</a>
+                <a href="#" class="footer_link">Blog</a>
+            </div>
+            <div class="footer_links_group">
+                <h5 class="footer_title">Resources</h5>
+                <a href="#" class="footer_link">HackerNews </a>
+                <a href="#" class="footer_link">Reddit</a>
+                <a href="#" class="footer_link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            let menuToggle = document.querySelector(".menu__toggle");
+            menuToggle.addEventListener("click", function(e) {
+                e.preventDefault();
+                let menu = document.querySelector("#menu");
+                menu.classList.toggle('open');
+            });
+            window.addEventListener('scroll', function() {
+                let windowPosition = window.scrollY > 0;
+                header.classList.toggle('active', windowPosition)
+            });
+        })();
+    </script>
+</body>
+
+</html>
